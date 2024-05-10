@@ -15,15 +15,15 @@ public class App {
 
         Cena cena = new Cena();
         List<Monster> lista = new ArrayList<>();
-        lista.add(new Monster("Orc", 2, 100, Comportamento.AGRESSIVO));
-        lista.add(new Monster("Goblin", 1, 50, Comportamento.AGRESSIVO));
+        //lista.add(new Monster("Orc", 2, 100, Comportamento.AGRESSIVO, "ARRRRRR!!!"));
+        lista.add(new Monster("Brunna", 1, 50, Comportamento.NEUTRO, "Vou te mataaaar!"));
 
-        // COMENTAR/DESCOMENTAR PARA ADICIONAR/REMOVER INIMIGOS.
-        //cena.setMonsters(lista);
+// COMENTAR/DESCOMENTAR PARA ADICIONAR/REMOVER INIMIGOS.
+        cena.setMonsters(lista);
 
 
-        Controller controller = new Controller(cena);
-        View view = new View(scanner, controller);
+        Controller controller = new Controller(scanner, cena);
+        View view = new View(controller);
         controller.setView(view);
        
         view.apresentacao();

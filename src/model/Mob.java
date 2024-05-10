@@ -16,6 +16,7 @@ public abstract class Mob {
         setNome(nome);
         setLevel(level);
         setXpbase(xpbase);
+        setComportamento(comportamento);
     }
 
 

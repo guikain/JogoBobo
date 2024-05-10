@@ -1,16 +1,12 @@
 package view;
 
-import java.util.Scanner;
-
 import controller.Controller;
 
 public class View {
 
-    private Scanner scanner; 
     private Controller controller;
     
-    public View(Scanner scanner, Controller controller) {
-        this.scanner = scanner;
+    public View(Controller controller) {
         this.controller = controller;
     }
     
@@ -21,7 +17,7 @@ public class View {
             System.out.println("Deseja se aproximar?");
             System.out.println("1 - Sim");
             System.out.println("2 - Nao");
-            controller.aproximar(readInt());
+            controller.aproximar();
         }
     }
 
@@ -30,13 +26,6 @@ public class View {
         System.out.println("Você vai ou você fica ?");
         System.out.println("1 - Ir");
         System.out.println("2 - Ficar");
-        controller.aproximar(readInt());
+        controller.aproximar();
     }
-
-    public int readInt(){
-        int input = scanner.nextInt();
-        scanner.nextLine();
-        return input;
-    }
-
 }

@@ -2,15 +2,18 @@ package model;
 
 public class Monster extends Mob {
 
-    public Monster(String nome, int level, int xpbase, Comportamento comportamento) {
+    private String grito;
+
+    public Monster(String nome, int level, int xpbase, Comportamento comportamento, String grito) {
         super(nome, level, xpbase, comportamento);
+        this.grito = grito;
     }
 
     private String atacar() {
         return " Parte para cima de você.";
     }
     private String gritar() {
-        return "AAAAAAAARRRRG!!";
+        return grito;
     }
 
     @Override
